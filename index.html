@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulário de Inscrição</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <form id="registrationForm" novalidate>
+        <!-- Section 1 -->
+        <section class="inicio">
+          <div class="voltar">
+            <img src="image3.png" alt="icone1" class="icon-voltar">
+            <a href="/d3/login/inicial.html" class="butao_voltar">voltar</a>
+        </div>
+          <h2>Formulário de inscrição</h2>
+          <p>Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas</p>
+        </section>
+
+        <!-- Section 2 -->
+        <section>
+          <h3>Informações do participante</h3>
+
+          <label for="nome">Nome completo
+            <input type="text" name="nome" id="nome" required />
+            <span class="erro" id="erro-nome"></span>
+          </label>
+
+          <label for="nascimento">Data de nascimento
+            <input type="date" name="nascimento" id="nascimento" required />
+            <span class="erro" id="erro-nascimento"></span>
+          </label>
+
+          <label for="cpf">CPF
+            <input type="text" name="cpf" id="cpf" required />
+            <span class="erro" id="erro-cpf"></span>
+          </label>
+
+          <label for="sexo">Sexo
+            <select name="sexo" id="sexo" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="feminino">Feminino</option>
+              <option value="masculino">Masculino</option>
+              <option value="outro">Outro</option>
+            </select>
+            <span class="erro" id="erro-sexo"></span>
+          </label>
+
+          <label for="email">E-mail
+            <input type="email" name="email" id="email" required />
+            <span class="erro" id="erro-email"></span>
+          </label>
+
+          <label for="telefone">Telefone
+            <input type="tel" name="telefone" id="telefone" required />
+            <span class="erro" id="erro-telefone"></span>
+          </label>
+
+          <label for="doc-identidade">Documento de Identidade</label>
+          <div class="custom-file-upload">
+            <input type="file" id="doc-identidade" required />
+            <label for="doc-identidade">
+              <img src="image9.png" alt="ícone upload" />
+              <span>Clique aqui para selecionar o arquivo</span>
+            </label>
+            <span class="erro" id="erro-doc-identidade"></span>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section>
+          <h3>Endereço residencial</h3>
+
+          <label for="cep">CEP
+            <input type="text" name="cep" id="cep" required />
+            <span class="erro" id="erro-cep"></span>
+          </label>
+
+          <div class="dupla">
+            <div>
+              <label for="rua">Rua
+                <input type="text" name="rua" id="rua" required />
+                <span class="erro" id="erro-rua"></span>
+              </label>
+            </div>
+            <div>
+              <label for="numero">Número
+                <input type="number" name="numero" id="numero" required />
+                <span class="erro" id="erro-numero"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="dupla">
+            <div>
+              <label for="cidade">Cidade
+                <input type="text" name="cidade" id="cidade" required />
+                <span class="erro" id="erro-cidade"></span>
+              </label>
+            </div>
+            <div>
+              <label for="estado">Estado
+                <input type="text" name="estado" id="estado" required />
+                <span class="erro" id="erro-estado"></span>
+              </label>
+            </div>
+          </div>
+
+          <label for="comprovante-residencia">Comprovante de residência</label>
+          <div class="custom-file-upload">
+            <input type="file" id="comprovante-residencia" required />
+            <label for="comprovante-residencia">
+              <img src="image9.png" alt="ícone upload" />
+              <span>Clique aqui para selecionar o arquivo</span>
+            </label>
+            <span class="erro" id="erro-comprovante-residencia"></span>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section>
+          <h3>Trilhas de aprendizagem</h3>
+          <p>Selecione apenas uma trilha</p>
+          <span class="erro" id="erro-trilha"></span>
+        
+          <div class="trilhas-grid">
+            <label class="trilha-option">
+              <input type="radio" name="trilha" value="frontend" />
+              <span class="check-icon"></span>
+              <img src="image4.png" alt="Front" />
+              <span class="trilha-nome">Programação Front-end</span>
+            </label>
+        
+            <label class="trilha-option">
+              <input type="radio" name="trilha" value="backend" />
+              <span class="check-icon"></span>
+              <img src="image5.png" alt="Back" />
+              <span class="trilha-nome">Programação Back-end</span>
+            </label>
+        
+            <label class="trilha-option">
+              <input type="radio" name="trilha" value="jogos" />
+              <span class="check-icon"></span>
+              <img src="image6.png" alt="Jogos" />
+              <span class="trilha-nome">Programação de Jogos</span>
+            </label>
+        
+            <label class="trilha-option">
+              <input type="radio" name="trilha" value="ux" />
+              <span class="check-icon"></span>
+              <img src="image7.png" alt="UX" />
+              <span class="trilha-nome">Design e Experiência</span>
+            </label>
+        
+            <label class="trilha-option">
+              <input type="radio" name="trilha" value="dados" />
+              <span class="check-icon"></span>
+              <img src="image8.png" alt="Ciência de Dados" />
+              <span class="trilha-nome">Ciência de Dados</span>
+            </label>
+          </div>
+        </section>
+
+        <!-- Section 5 -->
+         <section class="termos">
+          <div class="termos-container">
+            <input type="checkbox" id="termos" required />
+            <label for="termos">
+              Declaro que li e concordo com os
+              <strong>Termos e Condições</strong> e com a
+              <strong>Política de Privacidade</strong>.
+            </label>
+          </div>
+          <span class="erro" id="erro-termos"></span>
+         </section>
+
+         <!-- Section 6 -->
+        <h3>Dados do Login</h3>
+
+        <label for="ID">ID
+          <input type="text" name="ID" id="ID" required />
+          <span class="erro" id="erro-ID"></span>
+        </label>
+
+        <label for="senha">Senha
+          <input type="password" name="senha" id="senha" required />
+          <span class="erro" id="erro-senha"></span>
+        </label>
+
+        <!-- Section 7 -->
+        <section class="form-buttons">
+          <button type="reset" class="cancelar">Cancelar</button>
+          <button type="submit" class="enviar">Fazer inscrição</button>
+        </section>
+      </form>
+    </div>
+
+
+    <div class="image-section">
+      <img src="image1.png" alt="Ilustração do Programa" />
+      <img src="image2.png" alt="Ilustração do Programa" />
+    </div>
+  </div>
+</body>
